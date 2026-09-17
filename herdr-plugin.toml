@@ -1,0 +1,12 @@
+id = "local.clipboard-image-path"
+name = "Clipboard Image Path"
+version = "0.1.0"
+min_herdr_version = "0.9.1"
+description = "Save a Windows clipboard image and paste its WSL path into the focused pane"
+platforms = ["linux"]
+
+[[actions]]
+id = "paste-path"
+title = "Paste Windows clipboard image path"
+contexts = ["pane"]
+command = ["bash", "scripts/paste-clipboard-image-path.sh"]
