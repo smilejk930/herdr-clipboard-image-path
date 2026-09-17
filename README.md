@@ -41,7 +41,7 @@ for image paths, replacing Herdr's normal handling of that key.
 [[keys.command]]
 key = "ctrl+v"
 type = "plugin_action"
-command = "local.clipboard-image-path.paste-path"
+command = "herdr-clipboard-image-path.paste-path"
 description = "paste Windows clipboard image path"
 ```
 
@@ -56,7 +56,7 @@ Now capture with `Win+Shift+S`, focus a Herdr pane, and press `Ctrl+V`.
 ## Remove
 
 ```bash
-herdr plugin unlink local.clipboard-image-path
+herdr plugin unlink herdr-clipboard-image-path
 ```
 
 Remove the matching `[[keys.command]]` block from `config.toml`, then reload
