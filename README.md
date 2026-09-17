@@ -27,7 +27,7 @@ From WSL, Herdr receives the equivalent `/mnt/c/Users/...` path.
 After this plugin is published, install it from a Herdr-managed WSL pane:
 
 ```bash
-herdr plugin install <github-owner>/<repository>
+herdr plugin install smilejk930/herdr-clipboard-image-path
 ```
 
 ### From this local checkout
