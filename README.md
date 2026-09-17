@@ -5,13 +5,19 @@ types its WSL-visible path into the currently focused Herdr pane. It does not
 submit Enter, so the path can be edited before sending it to Codex or another
 program.
 
-Images are saved under the Windows temporary directory:
+Clipboard images are saved under the Windows temporary directory:
 
 ```text
 %TEMP%\herdr-clipboard-images\herdr-clipboard-*.png
 ```
 
 From WSL, Herdr receives the equivalent `/mnt/c/Users/...` path.
+
+If the capture tool saves screenshots directly to `Pictures\\Screenshots`
+instead of placing an image on the clipboard, the plugin uses the newest image
+there, provided it was created within the previous five minutes. This supports
+Windows' automatically saved screenshots such as
+`/mnt/c/Users/<Windows-user>/Pictures/Screenshots/<screenshot>.png`.
 
 ## Requirements
 
