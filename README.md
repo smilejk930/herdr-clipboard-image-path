@@ -1,6 +1,6 @@
 # Clipboard Image Path for Herdr on WSL
 
-This local Herdr plugin turns a Windows clipboard screenshot into a PNG and
+This Herdr plugin turns a Windows clipboard screenshot into a PNG and
 types its WSL-visible path into the currently focused Herdr pane. It does not
 submit Enter, so the path can be edited before sending it to Codex or another
 program.
@@ -22,21 +22,10 @@ From WSL, Herdr receives the equivalent `/mnt/c/Users/...` path.
 
 ## Install and bind Ctrl+V
 
-### From a GitHub repository
-
-After this plugin is published, install it from a Herdr-managed WSL pane:
+Install it from a Herdr-managed WSL pane:
 
 ```bash
 herdr plugin install smilejk930/herdr-clipboard-image-path
-```
-
-### From this local checkout
-
-For local development, run this from a Herdr-managed WSL pane while in this
-plugin directory:
-
-```bash
-herdr plugin link "$PWD"
 ```
 
 Add this to `~/.config/herdr/config.toml`. It deliberately reserves `Ctrl+V`
@@ -57,20 +46,6 @@ herdr server reload-config
 ```
 
 Now capture with `Win+Shift+S`, focus a Herdr pane, and press `Ctrl+V`.
-
-## Test without a keybinding
-
-With an image on the Windows clipboard:
-
-```bash
-herdr plugin action invoke local.clipboard-image-path.paste-path
-```
-
-If it fails, inspect the action log:
-
-```bash
-herdr plugin log list --plugin local.clipboard-image-path --limit 20
-```
 
 ## Remove
 
